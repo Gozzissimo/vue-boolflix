@@ -17,7 +17,8 @@
             return {
                 apiKey: '67eae03458a1925dc99578a8eaf2f7c6',
                 movieLanguage: 'en-US',
-                movieName: ''
+                movieName: '',
+                movies: []
             }
         },
 
@@ -34,7 +35,10 @@
                         }
                     })
                     .then(function (response) {
-                        console.log(response.data.results[0].title);
+                        // console.log(response);
+                        // console.log(response.data.results);
+                        // console.log(response.data.results[0].title);
+                        response.data.results.forEach(movie => console.log(movie.title));
                     })
                     .catch(function (error) {
                         console.log(error);
