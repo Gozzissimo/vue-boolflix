@@ -21,7 +21,7 @@ export default {
             type: String,
         },
         rating: {
-            type: String,
+            type: Number,
         },
     },
 }

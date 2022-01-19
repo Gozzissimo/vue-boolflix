@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header 
-      @filteredMovies="setMovieList($event)"
+      @movieSearch="setMovieList($event)"
     />
     <Main 
       :movies="movieList"
