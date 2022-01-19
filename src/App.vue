@@ -8,6 +8,7 @@
 <script>
 import Main from "./components/Main.vue";
 import Header from "./components/Header.vue";
+import Header from "./components/FilmCard.vue";
 
 
 export default {
@@ -15,6 +16,7 @@ export default {
   components: {
     Main,
     Header,
+    FilmCard,
   },
 };
 </script>
