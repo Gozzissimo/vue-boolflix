@@ -1,7 +1,9 @@
 <template>
-    <ul>
-        <li></li>
-    </ul>
+    <main>
+        <ul>
+            <li></li>
+        </ul>
+    </main>
 </template>
 
 <script>
@@ -10,6 +12,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 
 </style>
