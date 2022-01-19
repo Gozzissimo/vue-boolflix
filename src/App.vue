@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <Header />
-    <Main />
+    <Header 
+      @filteredMovies="setMovieList($event)"
+    />
+    <Main 
+      :movies="movieList"
+    />
   </div>
 </template>
 
 <script>
-import Main from "./components/Main.vue";
 import Header from "./components/Header.vue";
-import Header from "./components/FilmCard.vue";
+import Main from "./components/Main.vue";
 
 
 export default {
@@ -16,8 +19,20 @@ export default {
   components: {
     Main,
     Header,
-    FilmCard,
   },
+
+  data() {
+    return {
+      movieList: [],
+      }
+    },
+
+  methods: {
+    setMovieList(value) {
+      this.movieList = value;
+      // console.log(this.movieList);
+    }
+  }
 };
 </script>
 

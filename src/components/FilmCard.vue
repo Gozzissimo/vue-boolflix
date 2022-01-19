@@ -1,15 +1,29 @@
 <template>
     <li>
-        <h1>Titolo</h1>
-        <h2>Titolo Originale</h2>
-        <h3>Lingua</h3>
-        <h4>Voto</h4>
+        <h1>{{ movieTitle }}</h1>
+        <h2>{{ originalTitle }}</h2>
+        <h3>{{ language }}</h3>
+        <h4>{{ rating }}</h4>
     </li>
 </template>
 
 <script>
 export default {
-    name: "FilmCard"
+    name: "FilmCard",
+    props: {
+        movieTitle: {
+            type: String,
+        },
+        originalTitle: {
+            type: String,
+        },
+        language: {
+            type: String,
+        },
+        rating: {
+            type: String,
+        },
+    },
 }
 </script>
 
