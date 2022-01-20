@@ -1,9 +1,11 @@
 <template>
     <li>
-        <h1>{{ movieTitle }}</h1>
-        <h2>{{ originalTitle }}</h2>
-        <lang-flag :iso="language" />
-        <h4>{{ rating }}</h4>
+        <div>{{ movieTitle }}</div>
+        <div>{{ tvShowName }}</div>
+        <div>{{ originalTitle }}</div>
+        <div>{{ tvShowOriginalName }}</div>
+        <LangFlag :iso="language" />
+        <div>{{ rating }}</div>
     </li>
 </template>
 
@@ -24,6 +26,12 @@ export default {
         originalTitle: {
             type: String,
         },
+        tvShowName: {
+            type: String,
+        },
+        tvShowOriginalName: {
+            type: String,
+        },
         language: {
             type: String,
         },
@@ -34,6 +42,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    li {
+        margin: 1em;
+    }
 </style>

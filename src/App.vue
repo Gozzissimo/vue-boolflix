@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header 
-      @movieSearch="setMovieList($event)"
+      @mergedList="setMovieList($event)"
     />
     <Main 
       :movies="movieList"

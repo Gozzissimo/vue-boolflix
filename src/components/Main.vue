@@ -1,11 +1,13 @@
 <template>
     <main>
-        <ul>
+        <ul class="flex">
             <FilmCard 
                 v-for="(movie, index) in movies"
                 :key="index"
                 :movieTitle="movie.title"
+                :tvShowName="movie.name"
                 :originalTitle="movie.original_title"
+                :tvShowOriginalName="movie.original_name"
                 :language="movie.original_language"
                 :rating="movie.vote_average"
             />
@@ -30,6 +32,10 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-
+<style lang="scss" scoped>
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
 </style>
