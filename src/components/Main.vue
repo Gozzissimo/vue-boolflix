@@ -10,6 +10,7 @@
                 :tvShowOriginalName="movie.original_name"
                 :language="movie.original_language"
                 :rating="movie.vote_average"
+                :poster="movie.poster_path"
             />
         </ul>
     </main>

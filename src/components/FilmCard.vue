@@ -1,9 +1,14 @@
 <template>
     <li>
-        <div>{{ movieTitle }}</div>
-        <div>{{ tvShowName }}</div>
-        <div>{{ originalTitle }}</div>
-        <div>{{ tvShowOriginalName }}</div>
+        <h1 v-if="movieTitle">Movie</h1>
+        <h1 v-else>Tv Series</h1>
+        <div class="img">
+            <img
+            :src="(poster == null) ? 'https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png' : 'https://image.tmdb.org/t/p/w342' + poster"
+            :alt="movieTitle || tvShowName">
+        </div>
+        <div>{{ movieTitle || tvShowName}}</div>
+        <div>{{ originalTitle || tvShowOriginalName}}</div>
         <LangFlag :iso="language" />
         <div>{{ rating }}</div>
     </li>
@@ -38,6 +43,9 @@ export default {
         rating: {
             type: Number,
         },
+        poster: {
+            type: String,
+        },
     },
 }
 </script>
@@ -45,5 +53,12 @@ export default {
 <style lang="scss" scoped>
     li {
         margin: 1em;
+        .img {
+            width: 200px;
+            height: 300px;
+            img {
+                width: 100%;
+            }
+        }
     }
 </style>
