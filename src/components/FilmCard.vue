@@ -2,20 +2,19 @@
     <li>
         <h1>{{ movieTitle }}</h1>
         <h2>{{ originalTitle }}</h2>
-        <h3>{{ language }}</h3>
+        <lang-flag :iso="language" />
         <h4>{{ rating }}</h4>
-        <country-flag country='it' size='small'/>
     </li>
 </template>
 
 <script>
-import CountryFlag from "vue-country-flag";
+import LangFlag from 'vue-lang-code-flags';
 
 export default {
     name: "FilmCard",
 
     components: {
-        CountryFlag,
+        LangFlag,
     },
 
     props: {
