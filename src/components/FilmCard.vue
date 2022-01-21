@@ -4,18 +4,20 @@
         <h1 v-else>Tv Series</h1>
         <div class="img">
             <img
-            :src="(poster == null) ? 'https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png' : 'https://image.tmdb.org/t/p/w342' + poster"
+            :src="(poster == null) ? require('../assets/img/Image-Not-Available.png') : 'https://image.tmdb.org/t/p/w342' + poster"
             :alt="movieTitle || tvShowName">
         </div>
         <div>{{ movieTitle || tvShowName}}</div>
         <div>{{ originalTitle || tvShowOriginalName}}</div>
         <LangFlag :iso="language" />
         <div>{{ rating }}</div>
+        <i class="far fa-star">TEST ICONA</i>
     </li>
 </template>
 
 <script>
 import LangFlag from 'vue-lang-code-flags';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 export default {
     name: "FilmCard",
