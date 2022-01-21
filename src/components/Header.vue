@@ -46,9 +46,9 @@
 
             getMerged() {
                 this.moviesAndTvShows = [...this.filteredMovies, ...this.filteredTvShows];
-                console.log(this.filteredMovies);
-                console.log(this.filteredTvShows);
-                console.log(this.moviesAndTvShows);
+                // console.log(this.filteredMovies);
+                // console.log(this.filteredTvShows);
+                // console.log(this.moviesAndTvShows);
             },
 
             movieSearch() {

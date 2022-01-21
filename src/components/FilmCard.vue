@@ -10,8 +10,11 @@
         <div>{{ movieTitle || tvShowName}}</div>
         <div>{{ originalTitle || tvShowOriginalName}}</div>
         <LangFlag :iso="language" />
-        <div>{{ rating }}</div>
-        <i class="far fa-star">TEST ICONA</i>
+        <i
+            v-for="n in 5"
+            :key="n"
+            :class="(n <= ((Math.round(rating)) / 2)) ? 'fas fa-star' : 'far fa-star'"
+        />
     </li>
 </template>
 
