@@ -89,16 +89,19 @@ export default {
 
 <style lang="scss" scoped>
     .card{
-        width: 250px;
-        height: 300px;
-        border: 2px solid black;
+        height: 340px;
+        width: 200px;
+        border: 5px solid white;
         overflow-wrap: break-word;
         overflow: hidden;
+        & :hover {
+            cursor: pointer;
+        }
         .poster {
-            width: 250px;
-            height: 350px;
             img {
-                width: 100%;
+                object-fit: cover;
+                height: 340px;
+                width: 200px;
             }
         }
     }
