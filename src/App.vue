@@ -38,4 +38,9 @@ export default {
 
 <style lang="scss">
   @import "./assets/scss/style.scss";
+
+  #app {
+    background: $darkBgColor;
+    background: linear-gradient(180deg, #060606 12%, #141414 100%);  
+  }
 </style>

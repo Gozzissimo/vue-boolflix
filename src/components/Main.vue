@@ -35,14 +35,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import "../assets/scss/partials/_variables.scss";
 
     main {
-    // height: 100vh;
-    // overflow: auto;
-    }
+        padding: 0 1em;
+    }   
     .flex{
-        display: flex;
         flex-wrap: wrap;
-        list-style: none;
+        justify-content: space-around;
     }
 </style>

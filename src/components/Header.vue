@@ -2,11 +2,12 @@
     <header class="flex">
         <img src="../assets/img/logo.png" alt="fantaflix logo">
         <div class="box">
-            <input 
-                placeholder="Cerca Film o Serie Tv" 
+            <input
                 @keyup.enter="getSearch" 
                 v-model="searchedText" 
-                type="text">
+                type="text" 
+                placeholder="Cerca Film e Serie TV">
+            <i @click="getSearch" class="fas fa-search"></i>
         </div>
     </header>
 </template>
@@ -109,32 +110,36 @@
 <style lang="scss" scoped>
     @import "../assets/scss/partials/_variables.scss";
     
+    
 
     header {
         height: 100px;
         justify-content: space-between;
         align-items: center;
-        background-color: $lightBgColor;
         padding: 1em;
+        position: relative;
         input {
             padding: 10px;
             width: 80px;
             height: 70px;
             background: none;
-            border: 4px solid #b70a13;
+            border: 4px solid $redFontColor;
             border-radius: 50px;
             font-size: 1.2em;
             color: $whiteFontColor;
             outline: none;
             transition: .5s;
         }
-        .box:hover input{
+        .box:hover input {
             width: 350px;
-            background: #141414;
+            background: $lightBgColor;
             border-radius: 10px;
         }
-        .box:hover i{
-            opacity: 0;
+        i {
+            font-size: 26px;
+            color: $redFontColor;
+            margin-left: 10px;
+            cursor: pointer;
         }
     }
 </style>
