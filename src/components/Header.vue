@@ -1,13 +1,18 @@
 <template>
-    <header>
-        <input @keyup.enter="getSearch" v-model="searchedText" type="text">
-        <button @click="getSearch">
-            Cerca Film o Serie Tv
-        </button>
+    <header class="flex">
+        <img src="../assets/img/logo.png" alt="fantaflix logo">
+        <div class="box">
+            <input 
+                placeholder="Cerca Film o Serie Tv" 
+                @keyup.enter="getSearch" 
+                v-model="searchedText" 
+                type="text">
+        </div>
     </header>
 </template>
 
 <script>
+    import '@fortawesome/fontawesome-free/css/all.css';
     import axios from 'axios';
 
     export default {
@@ -100,7 +105,36 @@
         }
     }
 </script>
-
+    
 <style lang="scss" scoped>
+    @import "../assets/scss/partials/_variables.scss";
+    
 
+    header {
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $lightBgColor;
+        padding: 1em;
+        input {
+            padding: 10px;
+            width: 80px;
+            height: 70px;
+            background: none;
+            border: 4px solid #b70a13;
+            border-radius: 50px;
+            font-size: 1.2em;
+            color: $whiteFontColor;
+            outline: none;
+            transition: .5s;
+        }
+        .box:hover input{
+            width: 350px;
+            background: #141414;
+            border-radius: 10px;
+        }
+        .box:hover i{
+            opacity: 0;
+        }
+    }
 </style>
